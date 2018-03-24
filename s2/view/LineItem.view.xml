@@ -1,0 +1,61 @@
+﻿<mvc:View
+	controllerName="sap.ui.sample.poa.view.LineItem"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" >
+	<!-- title=" {i18n>lineItemTitle}" -->
+	<Page
+		id="page"
+		title="产品交付"
+		showNavButton="true"
+		navButtonPress="handleNavBack"
+		class="sapUiFioriObjectPage"
+		showFooter="{device>/isNoPhone}" >
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+		<content>
+			<ObjectHeader
+				title="{
+					path:'PurchaseOrderItemID',
+					formatter:'sap.ui.sample.poa.util.formatter.OrderIdWithLabel'	
+				}"
+				number="{Amount}"
+				numberUnit="{CurrencyCode}" >
+				<attributes>
+					<ObjectAttribute
+						text="{
+							path:'ProductName',
+							formatter:'sap.ui.sample.poa.util.formatter.ProductNameWithLabel'	
+						}" />
+				</attributes>
+			</ObjectHeader>
+			<form:SimpleForm
+				id="form"
+				minWidth="1024"
+				title="交付地点"
+				maxContainerCols="2" >
+					<Label text="交付公司"/>
+					<Text text="FMT国际托运公司"/>
+					<Label text="街道地址"/>
+					<Text text="松江区泗陈公路8888号"/>
+					<Label text="所属城市"/>
+					<Text text="上海"/>
+					<Label text="所属国家"/>
+					<Text text="中国"/>
+			</form:SimpleForm>
+			<List
+				headerText="交付清单"
+				backgroundDesign="Translucent">
+			</List>
+			<Table
+				headerText="交付流程">
+			</Table>
+			<Panel
+				headerText="备注">
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

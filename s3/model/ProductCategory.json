@@ -1,0 +1,27 @@
+[
+	{
+	"CategoryName" : "配件",
+		"Category" : "配件",
+		"NumberOfProducts" : 5
+	}, {
+		"CategoryName" : "液晶显示器",
+		"Category" : "液晶显示器",
+		"NumberOfProducts" : 3
+	}, {
+		"CategoryName" : "显卡",
+		"Category" : "显卡",
+		"NumberOfProducts" : 3
+	}, {
+		"CategoryName" : "键盘",
+		"Category" : "键盘",
+		"NumberOfProducts" : 2
+	}, {
+		"CategoryName" : "笔记本",
+		"Category" : "笔记本",
+		"NumberOfProducts" : 1
+	}, {
+		"CategoryName" : "打印机",
+		"Category" : "打印机",
+		"NumberOfProducts" : 2
+	}
+]

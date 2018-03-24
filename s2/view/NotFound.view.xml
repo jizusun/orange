@@ -1,0 +1,19 @@
+<mvc:View
+	controllerName="sap.ui.sample.poa.view.NotFound"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m">
+	<Page
+		title="未找到"
+		showNavButton="{device>/isPhone}"
+		navButtonPress="handleNavBack"
+		enableScrolling="false" >
+		<content>
+			<Label id="msgNotFound" class="margin" />
+		</content>
+		<footer>
+			<Bar />
+		</footer>
+	</Page>
+</mvc:View>

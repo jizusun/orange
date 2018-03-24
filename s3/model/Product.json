@@ -1,0 +1,164 @@
+
+[
+	{
+		"ProductId" : "id_1",
+		"Name" : "角斗士 MX",
+		"Category" : "显卡",
+		"SupplierName" : "Smartcards",
+		"ShortDescription" : "Gladiator MX: DDR2 RoHS 128MB 支持512MB 时钟频率: 350 MHz 内存频率: 533 MHz, 总线类型: PCI-Express, 内存类型: DDR2 内存总线: 32-bit 突出特点: DVI Out, TV Out , HDTV",
+		"Weight" : "321",
+		"status" : "A",
+		"Price" : 648.70,
+		"PictureUrl" : "img/product/HT-1071.jpg"
+	}, {
+		"ProductId" : "id_2",
+		"Name" : "Psimax",
+		"Category" : "显卡",
+		"SupplierName" : "Smartcards",
+		"ShortDescription" : "PsimaX: 高性能的thePsimax能满足你的挑战性需求，为您带来无限制的娱乐体验.",
+		"Weight" : "301",
+		"status" : "A",
+		"Price" : 3199.99,
+		"PictureUrl" :"img/product/HT-1073.jpg"
+	}, {
+		"ProductId" : "id_3",
+		"Name" : "飓风 GX",
+		"Category" : "显卡",
+		"SupplierName" : "Ultrasonic United",
+		"ShortDescription" : "飓风 GX: DDR2 RoHS 512MB 支持1024MB 时钟频率: 550 MHz 内存频率: 933 MHz, 总线类型: PCI-Express, 内存类型: DDR2 内存总线: 64-bit 突出特点: DVI Out, TV-In, TV-Out, HDTV",
+		"Weight" : "276",
+		"status" : "O",
+		"Price" : 1752,
+		"PictureUrl" :"img/product/HT-1072.jpg"
+	}, {
+		"ProductId" : "id_4",
+		"Name" : "网络摄像头",
+		"Category" : "配件",
+		"SupplierName" : "Technocom",
+		"ShortDescription" : "网络摄像头, 彩色, 高速USB接口",
+		"Weight" : "700",
+		"status" : "A",
+		"Price" : 472,
+		"PictureUrl" :"img/product/HT-1112.jpg"
+	}, {
+		"ProductId" : "id_5",
+		"Name" : "笔记本锁",
+		"Category" : "配件",
+		"SupplierName" : "Technocom",
+		"ShortDescription" : "笔记本防盗锁",
+		"Weight" : "40",
+		"status" : "D",
+		"Price" : 107.92,
+		"PictureUrl" :"img/product/HT-1111.jpg"
+	}, {
+		"ProductId" : "id_6",
+		"Name" : "笔记本包",
+		"Category" : "配件",
+		"SupplierName" : "红点商店",
+		"ShortDescription" : "配备了更多的收纳空间，让您轻松收纳笔及其他文具",
+		"Weight" : "789",
+		"status" : "A",
+		"Price" : 632.99,
+		"PictureUrl" :"img/product/HT-1114.jpg"
+	}, {
+		"ProductId" : "id_7",
+		"Name" : "CD/DVD光盘收纳盒",
+		"Category" : "配件",
+		"SupplierName" : "红点商店",
+		"ShortDescription" : "收纳，保护和携带您的刻录光盘的首选",
+		"Weight" : "21",
+		"status" : "O",
+		"Price" : 59.99,
+		"PictureUrl" :"img/product/HT-2027.jpg"
+	}, {
+		"ProductId" : "id_8",
+		"Name" : "U盘 16GB",
+		"Category" : "配件",
+		"SupplierName" : "红点商店",
+		"ShortDescription" : "USB3.0  极速 16GB",
+		"Weight" : "11",
+		"status" : "A",
+		"Price" : 137.52,
+		"PictureUrl" :"img/product/HT-6120.jpg"
+	}, {
+		"ProductId" : "id_9",
+		"Name" : "超高速喷墨打印机",
+		"Category" : "打印机",
+		"SupplierName" : "Alpha Printers",
+		"ShortDescription" : "分辨率: 1200 dpi x 1200 dpi - 最高打印速率: 25页/分钟 (黑白), 24页/分钟 (彩色) - 容量: 100页 - 高速 USB2.0, 以太网",
+		"Weight" : "899",
+		"status" : "A",
+		"Price" : 937.52,
+		"PictureUrl" :"img/product/HT-1052.jpg"
+	}, {
+		"ProductId" : "id_10",
+		"Name" : "全功能专业激光打印机",
+		"Category" : "打印机",
+		"SupplierName" : "Printer for All",
+		"ShortDescription" : "A4纸最高打印速率: 25页/分钟 (黑白), 24页/分钟 (彩色), 黑白首页输出时间低于13秒, 彩色首页输出时间低于15秒",
+		"Weight" : "786",
+		"status" : "D",
+		"Price" : 319.99,
+		"PictureUrl" :"img/product/HT-1040.jpg"
+	}, {
+		"ProductId" : "id_11",
+		"Name" : "小型显示器",
+		"Category" : "液晶显示器",
+		"SupplierName" : "Very Best Screens",
+		"ShortDescription" : "19英寸 最佳分辨率 1600 x 1200 @ 85Hz, 最大分辨率 1984 x 1488 @ 75Hz, 点距: 0.24mm",
+		"Weight" : "1230",
+		"status" : "A",
+		"Price" : 2689,
+		"PictureUrl" :"img/product/HT-1030.jpg"
+	}, {
+		"ProductId" : "id_12",
+		"Name" : "中型显示器",
+		"Category" : "液晶显示器",
+		"SupplierName" : "Very Best Screens",
+		"ShortDescription" : "21英寸 最佳分辨率 1984 x 1488 @ 85Hz, 最大分辨率 1720 x 1280 @ 75Hz, 点距: 0.24mm",
+		"Weight" : "1300",
+		"status" : "A",
+		"Price" : 4839,
+		"PictureUrl" :"img/product/HT-1032.jpg"
+	}, {
+		"ProductId" : "id_13",
+		"Name" : "加大型显示器 II",
+		"Category" : "液晶显示器",
+		"SupplierName" : "Very Best Screens",
+		"ShortDescription" : "23英寸 最佳分辨率 2048 x 1536 @ 85Hz, 最大分辨率 2080 x 1560 @ 75Hz, 点距: 0.24mm",
+		"Weight" : "1500",
+		"status" : "O",
+		"Price" : 9669,
+		"PictureUrl" :"img/product/HT-1138.jpg"
+	}, {
+		"ProductId" : "id_14",
+		"Name" : "高端笔记本 2A",
+		"Category" : "笔记本",
+		"SupplierName" : "Titanium",
+		"ShortDescription" : "专业高效能笔记本电脑 2.6GHz主频 - 17 英寸液晶屏 - 4096MB DDR2 SDRAM - 160GB 硬盘 - DVD刻录光驱 (DVD-R/+R/-RW/-RAM)",
+		"Weight" : "1190",
+		"status" : "A",
+		"Price" : 8199,
+		"PictureUrl" :"img/product/HT-1010.jpg"
+	}, {
+		"ProductId" : "id_15",
+		"Name" : "人体工程学键盘",
+		"Category" : "键盘",
+		"SupplierName" : "Oxynum",
+		"ShortDescription" : "符合人体工程学的流线型设计, 同时增加了许多方便您快速访问互联网的按键, USB接口",
+		"Weight" : "467",
+		"status" : "D",
+		"Price" : 256.49,
+		"PictureUrl" :"img/product/HT-1063.jpg"
+	}, {
+		"ProductId" : "id_16",
+		"Name" : "中坚黑客键盘",
+		"Category" : "键盘",
+		"SupplierName" : "Fasttech",
+		"ShortDescription" : "键盘增加了许多方便您的多媒体应用的按键, 无论您是休闲爱好者, 还是铁杆黑客, 这款绝对都是您的不二之选, USB接口",
+		"Weight" : "651",
+		"status" : "A",
+		"Price" : 489,
+		"PictureUrl" :"img/product/HT-1064.jpg"
+	}
+]

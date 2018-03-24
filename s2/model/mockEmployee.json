@@ -1,0 +1,46 @@
+{
+	"Employees" : [
+		{
+			"FirstName" : "乔治",
+			"LastName" : "华盛顿",
+			"Department" : "管理部",
+			"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/2/25/George_Washington_as_CIC_of_the_Continental_Army_bust.jpg"
+		},
+		{
+			"FirstName" : "亚历山大",
+			"LastName" : "维多利亚",
+			"Department" : "运营部",
+			"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/a/aa/Dronning_victoria.jpg"
+		},
+		{
+			"FirstName" : "弗里德里希",
+			"LastName" : "查理",
+			"Department" : "审批部",
+			"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/f/fc/Frederic_II_de_prusse.jpg"
+		},
+		{
+			"FirstName" : "艾格尼丝",
+			"LastName" : "特里萨",
+			"Department" : "架构和创新服务部",
+			"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/6/6e/The_Saint_Mother_Teresa.jpg"
+		},
+		{
+			"FirstName" : "西格蒙德",
+			"LastName" : "佛洛伊德",
+			"Department" : "人力资源部",
+			"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/6/69/Sigmund_Freud_Anciano.jpg"
+		},
+		{
+			"FirstName" : "克里斯多弗",
+			"LastName" : "哥伦布",
+			"Department" : "架构和创新服务部",
+			"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/0/06/CristobalColon.jpg"
+		},
+		{
+			"FirstName" : "温斯顿",
+			"LastName" : "丘吉尔",
+			"Department" : "人力资源部",
+			"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/3/35/Churchill_portrait_NYP_45063.jpg"
+		}
+	]
+}

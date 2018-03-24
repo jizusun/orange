@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="minimal-ui, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>门户网站</title>
+
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+
+<style>
+
+.sapUtiSearchFieldPadding {
+    margin-bottom: 0.4rem;
+}
+
+.sapSuiteUtiGeneralOnPage .sapMListTblCell {
+    padding: 6px 2px;
+}
+
+.sapMList.sapSuiteUtiGeneralOnPage {
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.sapSuiteUtiGeneralInTeaser .sapMListTblCell {
+    padding: 5px 2px;
+}
+
+.sapSuiteFov .sapMListTblHeaderNone .sapMListTblCell {
+    padding: 0;
+}
+
+.sapUtiImagePaddingLeft {
+    margin-left: 0.5rem;
+}
+
+.sapUtiImagePaddingRight {
+    margin-right: 1rem;
+}
+
+.sapUtiImagePaddingRight.sapUtiRtl {
+	margin-left: 1rem;
+	margin-right: 0;
+}
+
+.sapUtiTextName {
+	font: 16px;
+	margin-bottom: 8px;
+}
+
+.sapUtiTextValue {
+	font: 12px;
+	font-weight: normal;
+	color: #666666; 
+}
+
+.sapUtiTileImagePadding {
+    margin-left: 12px;
+    margin-right: 16px;
+}
+
+.sapUtiTileImagePaddingRight.sapUtiRtl {
+    margin-left: 28px;
+    margin-right: 0;
+}
+
+.sapUtiContactsBox {
+	margin: 13px 0 6px 0;
+}
+
+.sapUtiContactsImage {
+	margin: 0 1rem 0 0;
+}
+
+html[dir=rtl] .sapUtiContactsImage {
+	margin: 0 0 0 1rem;
+}
+
+
+.sapSuiteFovContent .sapUtiContactsGrid, 
+.sapSuiteFovContent .sapUtiContactsGrid>div {
+		margin: 0;
+		padding: 0;
+}
+
+.sapSuiteFovContent>.sapUtiFacetOverviewContentMargin {
+    margin: 0;
+}
+
+.sapSuiteUtiSalesQuotation {
+    background-color: #FFFFFF;
+    margin: 0;
+}
+.sap-phone .sapSuiteUtiSalesQuotation {
+    padding: 1rem 1rem;
+}
+
+.sapSuiteUtiOrderDetails {
+    margin: 0;
+}
+
+.sap-phone .sapSuiteUtiOrderDetails {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sap-phone .sapSuiteUtgContent > .sapMVBox > .sapMFlexItem {
+    margin-bottom: 1rem;
+}
+
+.sapUtiLocationFacet > div > div:FIRST-CHILD {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.sapUtiLocationFacet > div > div:LAST-CHILD {
+    margin-left: 1rem;
+}
+
+.sap-phone .sapUtiSalesOrgFacet {
+    /* width: 80%; */
+    width: 100%;
+}
+
+.sapUtiSalesOrgFacet > .sapMFlexBox {
+    padding: 0 0.5rem 0.5rem 0;
+}
+
+.sapUtiSalesOrgKeyLabel {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.sapUtiSalesOrgDelimiter {
+	padding-right: 0.4rem;
+}
+
+.sapUtiSalesOrgValueLabel {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.sapSuiteUti .vbi-main {
+	border:none;
+}
+
+.sapUiExploredFeedMargin {
+  /*margin-top: 1rem;*/
+  margin-bottom: 1rem;
+}
+
+/*.sapUiExploredFeedPadding {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}*/
+
+.xcLinkItemMargin{
+	margin-right: 1rem;
+}
+
+@media all and (orientation:portrait) {
+	.sap-phone .sapUtiSalesOrgValueLabel {
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    /*max-width : 88px;*/
+	}
+	/*.sap-phone .sapUtiSalesOrgKeyLabel {
+		max-width : 88px;
+	}
+	
+	.sap-phone .xcLinkItemMargin {
+		margin-right: 0.5rem;
+	}*/
+}
+
+body {
+      			overflow: hidden
+    		}
+    		;
+   	 		#splash-screen {
+      			position: absolute;
+      			top: 0;
+      			left: 0;
+      			right: 0;
+      			bottom: 0;
+      			overflow: hidden;
+      			background-color: #e7e7e7 !important;
+      			background-size: 100% !important;
+      			background-position: center !important;
+      			background-repeat: no-repeat !important;
+    		}
+    		#splash-screen > * {
+      			/* center child divs  */
+      			position: absolute;
+      			top: 50%;
+      			left: 50%;
+      			/* x-border-box */
+      			box-sizing: border-box;
+      			-moz-box-sizing: border-box;
+      			-ms-box-sizing: border-box;
+      			-webkit-box-sizing: border-box;
+      			/* x-unselectable */
+      			user-select: none;
+      			-o-user-select: none;
+      			-ms-user-select: none;
+      			-moz-user-select: -moz-none;
+      			-webkit-user-select: none;
+      			cursor: default;
+    		}
+    		.splash-screen-circle-outer {
+      			z-index: 20000;
+      			width: 100px;
+      			height: 100px;
+      			border-radius: 100px;
+      			margin-top: -50px;
+      			margin-left: -50px;
+      			border: 5px solid rgba(87, 113, 145, 0.9);
+      			opacity: .9;
+      			border-right: 5px solid rgba(0, 0, 0, 0);
+      			border-left: 5px solid rgba(0, 0, 0, 0);
+      			box-shadow: 0 0 35px #577191;
+      			-moz-animation: spinPulse 1s infinite ease-in-out;
+      			-webkit-animation: spinPulse 1s infinite linear;
+    		}
+    		.splash-screen-circle-inner {
+      			z-index: 20001;
+      			width: 80px;
+      			height: 80px;
+      			border-radius: 80px;
+      			margin-top: -40px;
+      			margin-left: -40px;
+      			background-color: rgba(0, 0, 0, 0);
+      			border: 5px solid rgba(87, 113, 145, 0.9);
+      			opacity: .9;
+      			border-left: 5px solid rgba(0, 0, 0, 0);
+      			border-right: 5px solid rgba(0, 0, 0, 0);
+      			box-shadow: 0 0 15px #577191;
+      			-moz-animation: spinoffPulse 1s infinite linear;
+      			-webkit-animation: spinoffPulse 1s infinite linear;
+    		}
+    		.splash-screen-text {
+      			z-index: 20002;
+      			width: 100px;
+      			height: 100px;
+      			line-height: 100px;
+      			margin-top: -50px;
+      			margin-left: -50px;
+      			font-family: Verdana, Geneva, sans-serif;
+      			font-size: 13px;
+      			text-align: center;
+      			text-shadow: 1px 1px #cccccc;
+      			vertical-align: middle;
+      			color: #002951;   
+    		}
+    		@-moz-keyframes spinPulse {
+      			0% {
+        			-moz-transform: rotate(160deg);
+        			opacity: 0;
+        			box-shadow: 0 0 1px #577191;
+      			}
+      			50% {
+        			-moz-transform: rotate(145deg);
+        			opacity: 1;
+      			}
+      			100% {
+        			-moz-transform: rotate(-320deg);
+        			opacity: 0;
+      			}
+    		}
+    		@-moz-keyframes spinoffPulse {
+      			0% {
+        			-moz-transform: rotate(0deg);
+      			}
+      			100% {
+        			-moz-transform: rotate(360deg);
+      			}
+    		}
+    		@-webkit-keyframes spinPulse {
+      			0% {
+        			-webkit-transform: rotate(160deg);
+        			opacity: 0;
+        			box-shadow: 0 0 1px #577191;
+      			}
+      			50% {
+        			-webkit-transform: rotate(145deg);
+        			opacity: 1;
+      			}
+      			100% {
+        			-webkit-transform: rotate(-320deg);
+        			opacity: 0;
+      			}
+    		}
+    		@-webkit-keyframes spinoffPulse {
+      			0% {
+        			-webkit-transform: rotate(0deg);
+      			}
+      			100% {
+        			-webkit-transform: rotate(360deg);
+      			}
+    		}
+</style>
+
+   <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+            type="text/javascript"
+            id="sap-ui-bootstrap"
+            data-sap-ui-libs="sap.suite.ui.commons, sap.m, sap.ui.layout, sap.viz, sap.ui.commons"
+            data-sap-ui-theme="sap_bluecrystal"></script>
+
+    <script src="./UnifiedThingInspector/Utilities.js"></script>
+    <script src="./UnifiedThingInspector/NewsFacet.js"></script>
+    <script src="./UnifiedThingInspector/OrderFacet.js"></script>
+    <script src="./UnifiedThingInspector/ProductsFacet.js"></script>
+    <script src="./UnifiedThingInspector/ContactsFacet.js"></script>
+    <script src="./UnifiedThingInspector/AttachmentsFacet.js"></script>
+    <script src="./UnifiedThingInspector/ComplaintsFacet.js"></script>
+    <script src="./UnifiedThingInspector/InfoFacet.js"></script>
+
+
+<script type="text/javascript">
+var oFacetData = {
+		        //order: oOrderFacetGroup,
+		        products: oProductsFacetGroup,
+		        contacts: oContactsFacetGroup,
+		        attachments: oAttachmentsFacetGroup,
+		        complaints: oComplaintsFacetGroup
+		    };
+
+		    function setFacetContent(sKey) {
+		        oUTI.navigateToDetailWithContent(oFacetData[sKey]);
+		    }
+
+var oUTI = null;
+
+
+function appInit() {
+		if (window.cordova) {
+		// cordova specific launch code
+		}
+		else {
+		    jQuery.sap.initMobile();
+
+		    jQuery.sap.require("sap.m.MessageToast");
+		    jQuery.sap.require("sap.ui.core.format.DateFormat");
+		    
+		    var oData = {
+		        title: "邻 家 果 园",
+		        name: "我们努力，只为新鲜您的生活",
+		        description: "----始于1986",
+		        kpis: [{
+		        	id: "kpi0",
+		        	value: "900",
+		            valueScale: "个",
+		            description: "全国新鲜果园",
+		            valueStatus: sap.suite.ui.commons.ValueStatus.Critical
+		        }, {
+		        	id: "kpi1",
+		            value: "2000",
+		            valueScale: "家",
+		            description: "全国线下门店",
+		            valueStatus: sap.suite.ui.commons.ValueStatus.Good
+		        }, {
+		        	id: "kpi2",
+		        	value: "200",
+		            valueScale: "万",
+		            description: "客户的共同选择",
+		            valueStatus: sap.suite.ui.commons.ValueStatus.Bad
+		        }],
+		        configurations : [
+				   {
+		    		   icon: "images/weixin_128x128.png",
+		               text: "关注官方微信"
+		           },
+		           {
+		               icon: "images/weibo_128x128.png",
+		    		   text: "关注官方微博"
+				   }              
+		        ],
+		        actions : [
+		           {
+		               icon: "sap-icon://nutrition-activity",
+		               text: "全部商品"
+		           },
+		           {
+		               icon: "sap-icon://person-placeholder",
+		               text: "销售团队"
+		           },
+		           {
+		               icon: "sap-icon://download",
+		               text: "下载专区"
+		           },
+		           {
+		               icon: "sap-icon://notification-2",
+		               text: "意见箱"
+		           },
+		           {
+		               icon: "sap-icon://home",
+		               text: "返回首页"
+		           }
+		         ]
+		    };
+		    var oModel = new sap.ui.model.json.JSONModel();
+		    oModel.setData(oData);
+
+		    var oButtonTempl = new sap.m.Button({
+		        icon : "{icon}",
+		        text : "{text}",
+		        press : function(oE) {
+		            switch(oE.getSource().getText()){
+		            	case "全部商品": oProductsFacet.firePress(); break;
+		            	case "销售团队": oContactsFacet.firePress(); break;
+		            	case "下载专区": oAttachmentsFacet.firePress(); break;
+		            	case "意见箱": oComplaintsFacet.firePress(); break;
+		            	case "返回首页": oUTI._oNavContainer.back(); break;
+		            	default: break;
+		            }
+		        }
+		    });
+		    
+		    var fnKpiFactory = function(sId, oContext) {
+		    	sId = oContext.getProperty("id");
+		        
+		        var oTemp = new sap.suite.ui.commons.KpiTile(sId, {
+		            value: "{value}",
+		            description: "{description}",
+		            valueScale: "{valueScale}",
+		            valueUnit: "{valueUnit}",
+		            doubleFontSize: "{doubleFontSize}",
+		            valueStatus: "{valueStatus}"
+		        });
+		        
+		        return oTemp;
+		    };
+		    
+			 var oActionSheet = new sap.m.ActionSheet("unified-action-sheet-ext", {
+				  showCancelButton: true,
+				  placement: sap.m.PlacementType.Top,
+		        	buttons : {
+		            path: "/actions",
+		            template : oButtonTempl
+		        }
+			});
+			oActionSheet.setModel(oModel);
+		    
+		    oUTI = new sap.suite.ui.commons.UnifiedThingInspector({
+		        id : "unified",
+		        icon: "images/logo.png",
+		        title : "{/title}",
+		        name : "{/name}",
+		        description : "{/description}",
+		        actionsVisible : true,
+		        transactionsVisible : false,
+		        configurationVisible : isPhone,
+		        kpis : {
+		            path : "/kpis",
+		            factory: fnKpiFactory
+		        },
+		        facets : [ oNewsFacet, oOrderFacet, oProductsFacet, oContactsFacet, oAttachmentsFacet, oComplaintsFacet, oInfoFacet,
+		                 ],
+		        afterNavigate: function(event){
+		        	if(event.getSource()._oMasterPage.getId() == event.getParameters().getParameter("toId")){
+		        		if(!isPhone)
+		        			oNewsFacetContent.rerender();
+		        	}
+		        }
+		    }).addDelegate({
+		    	onAfterRendering: function(event){
+		    		if(isPhone)
+		    			(oUTI._oMasterPage.getFooter().getContentLeft())[0].setIcon("sap-icon://discussion");
+		    		
+		    		var oMasterPageTitle = (oUtiMasterPage.mAggregations._internalHeader.getContentMiddle())[0].getDomRef();
+		    		oMasterPageTitle.style.color = "#007833";
+		    		//oMasterPageTitle.style.fontFamily = "\"Comic Sans MS\", cursive, sans-serif";
+		    		oMasterPageTitle.style.fontSize = isPhone ? "1.3rem":"1.5rem";
+		    		
+		    		var oDetailPageTitle = (oUTI._oDetailPage.mAggregations._internalHeader.getContentMiddle())[0];
+		    		oDetailPageTitle.addDelegate({
+		    	    	onAfterRendering: function(event){
+		    	    		if(isPhone)
+		    	    			(oUTI._oDetailPage.getFooter().getContentLeft())[0].setIcon("sap-icon://discussion");
+		    	    		
+		    	    		oDetailPageTitleDom = oDetailPageTitle.getDomRef();
+		    	    		oDetailPageTitleDom.style.color = "#007833";
+		    	    		oDetailPageTitleDom.style.fontSize = isPhone ? "1.3rem":"1.5rem";
+		    	    	}
+		    		});
+		    		
+		    		var oKpi2 = document.getElementById("kpi2");
+		    		oKpi2.children[1].style.color = "#660099";
+		    	}
+		    });
+		    
+		    var oUtiMasterPage = oUTI._oMasterPage;
+			oUtiMasterPage.setShowNavButton(false);
+			
+			if(!isPhone){
+				oUtiMasterPage.insertHeaderContent(new sap.m.Button({
+					icon: "images/weixin.png",
+					tooltip: "关注官方微信",
+					press: function(){
+						sap.m.MessageToast.show("关注官方微信");
+					}
+				}), 1);
+				oUtiMasterPage.insertHeaderContent(new sap.m.Button({
+					icon: "images/weibo.png",
+					tooltip: "关注官方微博",
+					press: function(){
+						sap.m.MessageToast.show("关注官方微博");
+					}
+				}), 2);
+			}
+			else{
+			    var oButtonTemp2 = new sap.m.Button({
+			        icon : "{icon}",
+			        text : "{text}",
+			        press : function(oE) {
+			            switch(oE.getSource().getText()){
+			            	case "关注官方微信": sap.m.MessageToast.show("关注官方微信"); break;
+			            	case "关注官方微博": sap.m.MessageToast.show("关注官方微博"); break;
+			            	default: break;
+			            }
+			        }
+			    });
+				var oConfigurationSheet = new sap.m.ActionSheet("unified-configuration-sheet-ext", {
+					showCancelButton: true,
+					placement: sap.m.PlacementType.Top,
+				    buttons : {
+				    	path: "/configurations",
+				        template : oButtonTemp2
+				    }
+				});
+				oConfigurationSheet.setModel(oModel);
+				
+				oUTI.attachConfigurationButtonPress(function(oE){
+					oE.preventDefault();
+			    	var oConfigurationBtn = oE.getParameter("caller");
+			    	oConfigurationSheet.openBy(oConfigurationBtn);
+			    });
+			}    
+		    
+		    oUTI.attachActionsButtonPress(function(oE){
+		    	oE.preventDefault();
+		    	var oActionBtn = oE.getParameter("caller");
+		    	oActionSheet.openBy(oActionBtn);
+		    });
+		    
+		    oUTI.setModel(oModel);
+		    
+		    var oApp = new sap.m.App("myApp", {
+		    	initialPage:"initial-page"
+		    });
+		    
+		    var oInitialPage = new sap.m.Page("initial-page", {
+		        showHeader: false,
+		        enableScrolling: false,
+		        content:[ oUTI ]});
+		    oApp.addPage(oInitialPage);
+		    //oApp.placeAt("sample_home");
+		    
+		    var oShell = new sap.m.Shell();
+		    oShell.setApp(oApp);
+		    oShell.placeAt("sample_home");
+		}
+}
+
+function appReady() {
+		//$("#splash-screen").remove();
+		appInit();
+}
+
+window.onload = function(){
+		if(window.cordova){
+		document.addEventListener("deviceready", appReady, false);
+		}
+		else{
+		appReady();
+		}
+}
+    </script>
+
+    <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-61493556-1', 'auto');
+	ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="sapUiBody" id="sample_home">
+    <!-- <div id="sample_home" style="width: 100%; height: 100%;"></div> -->
+    <div id="splash-screen">
+    		<div class="splash-screen-text">加载中...</div>
+		<!-- <div class="splash-screen-circle-outer"></div> -->
+    		<div class="splash-screen-circle-inner"></div>
+  	</div>
+</body>
+</html>

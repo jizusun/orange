@@ -1,0 +1,12 @@
+{
+	"Menu" : [
+	       { "id":0, "name": "level 0", "row": 3, "sec": 10, "level": 0 },
+	       { "id":1, "name": "level 1", "row": 4, "sec": 10, "level": 0 },
+	       { "id":2, "name": "level 2", "row": 5, "sec": 15, "level": 0 },
+	       { "id":3, "name": "level 3", "row": 6, "sec": 30, "level": 0 },
+	       { "id":4, "name": "level 4", "row": 7, "sec": 40, "level": 0 },
+	       { "id":5, "name": "level 5", "row": 8, "sec": 60, "level": 0 },
+	       { "id":6, "name": "R", "row": -1, "sec": -1, "level": -1 },
+	       { "id":6, "name": "S", "row": -2, "sec": -1, "level": -1 },
+	]
+}
