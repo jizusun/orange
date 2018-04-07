@@ -320,7 +320,7 @@
 			</l:BlockLayout>
 		</content>
 		<dependents>
-			<LightBox id="lightBox">
+			<!-- <LightBox id="lightBox">
 				<imageContent>
 					<LightBoxItem
 						imageSrc="{
@@ -329,7 +329,22 @@
 						}"
 						title="{view>Name}"/>
 				</imageContent>
-			</LightBox>
+			</LightBox> -->
+			<Dialog id="lightBox" title="{view>Name}">
+				<content>
+					<Image
+						src="{
+							path: 'view>PictureUrl',
+							formatter : '.formatter.pictureUrl'
+						}"
+						densityAware="false"
+						width="100%"
+						height="100%"/>
+				</content>
+				<endButton>
+					<Button text="{i18n>dialogCloseAction}" press="onClosePictureDetail"/>
+				</endButton>
+			</Dialog>
 		</dependents>
 	</Page>
 </mvc:View>

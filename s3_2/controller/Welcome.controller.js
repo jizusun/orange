@@ -117,6 +117,10 @@ sap.ui.define([
 			this.byId("lightBox").open();
 		},
 
+		onClosePictureDetail: function(){
+			this.byId("lightBox").close();
+		},
+
 		/**
 		 * Event handler to determine which button was clicked
 		 * @param {sap.ui.base.Event} oEvent the button press event

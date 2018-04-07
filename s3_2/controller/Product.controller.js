@@ -96,6 +96,10 @@ sap.ui.define([
 
 		onPicturePress: function () {
 			this.byId("lightBox").open();
+		},
+
+		onClosePictureDetail: function(){
+			this.byId("lightBox").close();
 		}
 	});
 });

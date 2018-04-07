@@ -80,13 +80,25 @@
 		</content>
 
 		<dependents>
-			<LightBox id="lightBox">
+			<!-- <LightBox id="lightBox">
 				<imageContent>
 					<LightBoxItem
 						imageSrc="{PictureUrl}"
 						title="{Name}"/>
 				</imageContent>
-			</LightBox>
+			</LightBox> -->
+			<Dialog id="lightBox" title="{Name}">
+				<content>
+					<Image
+						src="{PictureUrl}"
+						densityAware="false"
+						width="100%"
+						height="100%"/>
+				</content>
+				<endButton>
+					<Button text="{i18n>dialogCloseAction}" press="onClosePictureDetail"/>
+				</endButton>
+			</Dialog>
 		</dependents>
 	</Page>
 </mvc:View>
