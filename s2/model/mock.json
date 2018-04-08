@@ -30,19 +30,19 @@
 			"Notes" : [
 				{
 					"Author" :"亚历山大 维多利亚",
-					"Text" :"年初有员工反映公司健身房部分器械有损坏，影响了使用，影响员工锻炼的积极性，严重降低了健身房的使用率，",
+					"Text" :"年初有员工反映公司健身房部分器械有损坏，影响了使用，影响员工锻炼的积极性，严重降低了健身房的使用率。",
 					"CreatedAt" : "2014-05-22T22:00:00",
 					"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/a/aa/Dronning_victoria.jpg"
 				},
 				{
 					"Author" :"乔治 华盛顿",
-					"Text" :"生命在于运动，我也加入了请愿更新健身器械的行列.",
+					"Text" :"生命在于运动，我也加入了请愿更新健身器械的行列。",
 					"CreatedAt" : "2014-05-22T22:00:00",
 					"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/2/25/George_Washington_as_CIC_of_the_Continental_Army_bust.jpg"
 				},
 				{
 					"Author" :"克里斯多弗 哥伦布",
-					"Text" :"我也加入了请愿更新健身器械的行列，望早日批复",
+					"Text" :"我也加入了请愿更新健身器械的行列，望早日批复。",
 					"CreatedAt" : "2014-05-22T22:00:00",
 					"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/0/06/CristobalColon.jpg"
 				}
@@ -154,7 +154,7 @@
 			"Notes" : [
 				{
 					"Author" :"乔治 华盛顿",
-					"Text" :"后勤采购，用于二季度庆功会",
+					"Text" :"后勤采购，用于二季度庆功会。",
 					"CreatedAt" : "2014-05-22T22:00:00",
 					"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/2/25/George_Washington_as_CIC_of_the_Continental_Army_bust.jpg"
 				},
@@ -298,7 +298,7 @@
 			"Notes" : [
 				{
 					"Author" :"乔治 华盛顿",
-					"Text" :"技术部的电脑显示器更新.",
+					"Text" :"技术部的电脑显示器更新。",
 					"CreatedAt" : "2014-05-22T22:00:00",
 					"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/2/25/George_Washington_as_CIC_of_the_Continental_Army_bust.jpg"
 				}
@@ -536,7 +536,7 @@
 			"Notes" : [
 				{
 					"Author" :"克里斯多弗 哥伦布",
-					"Text" :"公司新建的2号办公楼的7楼的装修材料",
+					"Text" :"公司新建的2号办公楼的7楼的装修材料。",
 					"CreatedAt" : "2014-05-22T22:00:00",
 					"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/0/06/CristobalColon.jpg"
 				},
@@ -680,7 +680,7 @@
 			"Notes" : [
 				{
 					"Author" :"乔治 华盛顿",
-					"Text" :"公司10楼会议室以及会客厅地板装修.",
+					"Text" :"公司10楼会议室以及会客厅地板装修。",
 					"CreatedAt" : "2014-05-22T22:00:00",
 					"Thumbnail" : "http://upload.wikimedia.org/wikipedia/commons/2/25/George_Washington_as_CIC_of_the_Continental_Army_bust.jpg"
 				},

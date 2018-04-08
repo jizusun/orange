@@ -50,7 +50,7 @@ sap.ui.sample.poa.util.formatter = {
 	},
 	
 	OrderIdWithLabel: function(value){
-		return "订单编号: " + value;
+		return "订单号: " + value;
 	},
 
 	ProductNameWithLabel: function(value){

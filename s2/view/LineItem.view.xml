@@ -35,6 +35,11 @@
 			<form:SimpleForm
 				id="form"
 				minWidth="1024"
+				labelSpanXL="4"
+				labelSpanL="4"
+				labelSpanM="4"
+				labelSpanS="4"
+				layout="ResponsiveGridLayout"
 				title="交付地点"
 				maxContainerCols="2" >
 					<Label text="交付公司"/>
@@ -53,9 +58,12 @@
 			<Table
 				headerText="交付流程">
 			</Table>
-			<Panel
+			<!-- <Panel
 				headerText="备注">
-			</Panel>
+			</Panel> -->
+			<Table
+				headerText="备注">
+			</Table>
 		</content>
 	</Page>
 </mvc:View>

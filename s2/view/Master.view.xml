@@ -83,19 +83,20 @@
 				</infoToolbar>
 				<items>
 					<ObjectListItem
-						title="{ID}"
+						title="订单号: {ID}"
 						number="{Amount}"
 						numberUnit="{CurrencyCode}"
 						press="handleListItemPress"
 						type="{device>/listItemType}" >
 						<attributes>
 							<ObjectAttribute
-								text="{
+								visible="{device>/isNoPhone}"
+								text="{CreatedByName}" />
+							<ObjectAttribute
+								text="{= ${device>/isPhone} ? ${CreatedByName} + ': ' : ''}{
 									path:'CreatedAt',
 									formatter:'sap.ui.sample.poa.util.formatter.Date'
 								}" />
-							<ObjectAttribute
-								text="{CreatedByName}" />
 						</attributes>
 						<firstStatus>
 							<ObjectStatus

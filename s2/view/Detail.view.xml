@@ -42,13 +42,13 @@
 				<attributes>
 					<ObjectAttribute
 						text="{
-							path:'CreatedAt',
-							formatter:'sap.ui.sample.poa.util.formatter.DateWithLabel'
+							path:'CreatedByName',
+							formatter:'sap.ui.sample.poa.util.formatter.CreatorWithLabel'
 						}" />
 					<ObjectAttribute
 						text="{
-							path:'CreatedByName',
-							formatter:'sap.ui.sample.poa.util.formatter.CreatorWithLabel'
+							path:'CreatedAt',
+							formatter:'sap.ui.sample.poa.util.formatter.DateWithLabel'
 						}" />
 				</attributes>
 				<firstStatus>
@@ -102,16 +102,16 @@
 						<header><Label text="产品" /></header>
 					</Column>
 					<Column
-						width="4em"
 						minScreenWidth="Tablet"
 						demandPopin="true"
+						popinDisplay="Inline"
 						hAlign="Center">
 						<header><Label text="数量" /></header>
 					</Column>
 					<Column
-						width="7em"
 						minScreenWidth="Tablet"
 						demandPopin="true"
+						popinDisplay="Inline"
 						hAlign="Center" >
 						<header><Label text="交付日期" /></header>
 					</Column>
