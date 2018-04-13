@@ -1,82 +1,77 @@
 [
 	{
-		"CategoryName" : "Accessories",
+		"CategoryName" : "其他配件",
 		"Category" : "AC",
 		"NumberOfProducts" : 34
 	},
 	{
-		"CategoryName" : "Desktop Computers",
+		"CategoryName" : "台式机",
 		"Category" : "DC",
 		"NumberOfProducts" : 5
 	},
 	{
-		"CategoryName" : "Flat Screens",
+		"CategoryName" : "液晶显示器",
 		"Category" : "FS",
-		"NumberOfProducts" : 3
+		"NumberOfProducts" : 6
 	},
 	{
-		"CategoryName" : "Keyboards",
+		"CategoryName" : "键盘",
 		"Category" : "KB",
 		"NumberOfProducts" : 4
 	},
 	{
-		"CategoryName" : "Laptops",
+		"CategoryName" : "笔记本",
 		"Category" : "LT",
-		"NumberOfProducts" : 11
+		"NumberOfProducts" : 10
 	},
 	{
-		"CategoryName" : "Printers",
+		"CategoryName" : "打印机",
 		"Category" : "PR",
 		"NumberOfProducts" : 9
 	},
 	{
-		"CategoryName" : "Smartphones and Tablets",
+		"CategoryName" : "智能手机和平板",
 		"Category" : "ST",
 		"NumberOfProducts" : 9
 	},
 	{
-		"CategoryName" : "Mice",
+		"CategoryName" : "鼠标",
 		"Category" : "MI",
 		"NumberOfProducts" : 7
 	},
 	{
-		"CategoryName" : "Computer System Accessories",
+		"CategoryName" : "电脑配件",
 		"Category" : "CSA",
 		"NumberOfProducts" : 7
 	},
 	{
-		"CategoryName" : "Graphics Card",
+		"CategoryName" : "显卡",
 		"Category" : "GC",
 		"NumberOfProducts" : 4
 	},
 	{
-		"CategoryName" : "Scanners",
+		"CategoryName" : "扫描仪",
 		"Category" : "SC",
 		"NumberOfProducts" : 4
 	},
 	{
-		"CategoryName" : "Speakers",
+		"CategoryName" : "扬声器",
 		"Category" : "SP",
 		"NumberOfProducts" : 3
 	},
 	{
-		"CategoryName" : "Software",
+		"CategoryName" : "软件",
 		"Category" : "SW",
 		"NumberOfProducts" : 8
 	},
 	{
-		"CategoryName" : "Telecommunication",
+		"CategoryName" : "无线电通讯",
 		"Category" : "TC",
 		"NumberOfProducts" : 3
 	},
 	{
-		"CategoryName" : "Servers",
+		"CategoryName" : "服务器",
 		"Category" : "SV",
-		"NumberOfProducts" : 3
-	},
-	{
-		"CategoryName" : "Flat Screen TVs",
-		"Category" : "FST",
 		"NumberOfProducts" : 3
 	}
 ]
