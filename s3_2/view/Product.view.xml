@@ -35,7 +35,7 @@
 					path : 'Price',
 					formatter : '.formatter.price'
 				}"
-				numberUnit="EUR">
+				numberUnit="RMB">
 				<attributes>
 					<ObjectAttribute
 						title="{i18n>productSupplierAttributeText}"
