@@ -2,7 +2,7 @@
 	{
 		"CategoryName" : "其他配件",
 		"Category" : "AC",
-		"NumberOfProducts" : 34
+		"NumberOfProducts" : 25
 	},
 	{
 		"CategoryName" : "台式机",
@@ -52,7 +52,7 @@
 	{
 		"CategoryName" : "扫描仪",
 		"Category" : "SC",
-		"NumberOfProducts" : 4
+		"NumberOfProducts" : 3
 	},
 	{
 		"CategoryName" : "扬声器",
