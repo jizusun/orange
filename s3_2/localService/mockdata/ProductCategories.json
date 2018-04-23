@@ -60,11 +60,6 @@
 		"NumberOfProducts" : 3
 	},
 	{
-		"CategoryName" : "软件",
-		"Category" : "SW",
-		"NumberOfProducts" : 8
-	},
-	{
 		"CategoryName" : "无线电通讯",
 		"Category" : "TC",
 		"NumberOfProducts" : 3
