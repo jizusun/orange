@@ -142,7 +142,10 @@
 									placeholder="{i18n>creditCardHolderText}"
 									value="{
 										path: '/CreditCard/Name',
-										type: 'sap.ui.model.type.String'
+										type: 'sap.ui.model.type.String',
+										constraints: {
+											minLength: 3
+										}
 									}"
 									change="checkCreditCardStep">
 									<layoutData>
@@ -407,7 +410,10 @@
 									placeholder="{i18n>addressText}"
 									value="{
 										path: '/InvoiceAddress/Address',
-										type: 'sap.ui.model.type.String'
+										type: 'sap.ui.model.type.String',
+										constraints: {
+											minLength: 4
+										} 
 									}"
 									change="checkInvoiceStep">
 									<layoutData>
@@ -432,7 +438,10 @@
 									placeholder="{i18n>cityText}"
 									value="{
 										path: '/InvoiceAddress/City',
-										type: 'sap.ui.model.type.String'
+										type: 'sap.ui.model.type.String',
+										constraints: {
+											minLength: 3
+										}
 									}"
 									change="checkInvoiceStep">
 									<layoutData>
@@ -481,7 +490,10 @@
 									placeholder="{i18n>countryText}"
 									value="{
 										path: '/InvoiceAddress/Country',
-										type: 'sap.ui.model.type.String'
+										type: 'sap.ui.model.type.String',
+										constraints: {
+											minLength: 2
+										}
 									}"
 									change="checkInvoiceStep">
 									<layoutData>
@@ -533,7 +545,10 @@
 									placeholder="{i18n>addressText}"
 									value="{
 										path: '/DeliveryAddress/Address',
-										type: 'sap.ui.model.type.String'
+										type: 'sap.ui.model.type.String',
+										constraints: {
+											minLength: 4
+										}
 									}"
 									change="checkDeliveryAddressStep">
 									<layoutData>
@@ -558,7 +573,10 @@
 									placeholder="{i18n>cityText}"
 									value="{
 										path: '/DeliveryAddress/City',
-										type: 'sap.ui.model.type.String'
+										type: 'sap.ui.model.type.String',
+										constraints: {
+											minLength: 3
+										}
 									}"
 									change="checkDeliveryAddressStep">
 									<layoutData>
@@ -607,7 +625,10 @@
 									placeholder="{i18n>countryText}"
 									value="{
 										path: '/DeliveryAddress/Country',
-										type: 'sap.ui.model.type.String'
+										type: 'sap.ui.model.type.String',
+										constraints: {
+											minLength: 2
+										}
 									}"
 									change="checkDeliveryAddressStep">
 									<layoutData>
