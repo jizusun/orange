@@ -59,7 +59,7 @@
 							path : 'Price',
 							formatter : '.formatter.price'
 						}"
-						numberUnit="EUR"
+						numberUnit="RMB"
 						press="onProductListItemPress"
 						iconDensityAware="false" >
 						<attributes>

@@ -27,7 +27,7 @@
 					text="{
 						path : 'cartProducts>/cartEntries',
 						formatter : '.formatter.totalPrice'
-					} EUR" />
+					} RMB" />
 				<ToolbarSpacer/>
 				<Button
 					id="proceedButton"
@@ -78,7 +78,7 @@
 							path : 'cartProducts>Price',
 							formatter : '.formatter.price'
 						}"
-						numberUnit="EUR"
+						numberUnit="RMB"
 						press="onEntryListPress"
 						iconDensityAware="false" >
 						<attributes>
@@ -126,7 +126,7 @@
 							path : 'cartProducts>Price',
 							formatter : '.formatter.price'
 						}"
-						numberUnit="EUR"
+						numberUnit="RMB"
 						press="onEntryListPress"
 						iconDensityAware="false" >
 						<attributes>

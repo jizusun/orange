@@ -52,7 +52,7 @@
 												path : 'cartProducts>Price',
 												formatter : '.formatter.price'
 											}"
-											numberUnit="EUR"
+											numberUnit="RMB"
 											press="onEntryListPress"
 											iconDensityAware="false">
 											<firstStatus>
@@ -75,7 +75,7 @@
 											text="{
 												path : 'cartProducts>/cartEntries',
 												formatter : '.formatter.totalPrice'
-											} EUR" />
+											} RMB" />
 									</contentRight>
 								</Bar>
 							</WizardStep>
@@ -690,12 +690,12 @@
 							</Toolbar>
 						</headerToolbar>
 						<content>
+								<!-- footerText="{
+										path : 'cartProducts>/savedForLaterEntries',
+										formatter : '.formatter.footerTextForCart'
+									}" -->
 							<List
 								id="summaryEntryList"
-								footerText="{
-									path : 'cartProducts>/savedForLaterEntries',
-									formatter : '.formatter.footerTextForCart'
-								}"
 								noDataText="{i18n>cartNoData}"
 								items="{
 									path : 'cartProducts>/cartEntries',
@@ -716,7 +716,7 @@
 											path : 'cartProducts>Price',
 											formatter : '.formatter.price'
 										}"
-										numberUnit="EUR"
+										numberUnit="RMB"
 										press="onEntryListPress"
 										iconDensityAware="false">
 										<firstStatus>
@@ -776,7 +776,7 @@
 						</form:toolbar>
 						<form:content>
 							<Label text="{i18n>checkoutSummaryPaymentHeader}" />
-							<Text text="{/SelectedPayment}" />
+							<Text text="{= ${/SelectedPayment}==='Credit Card' ? ${i18n>checkoutPaymentCreditCard} : (${/SelectedPayment}==='Bank Transfer' ? ${i18n>checkoutPaymentBankTransfer} : ${i18n>checkoutPaymentCod}) }" />
 						</form:content>
 					</form:SimpleForm>
 
@@ -934,7 +934,7 @@
 						</form:toolbar>
 						<form:content>
 							<Label text="{i18n>checkoutSummaryDeliveryHeader}" />
-							<Text id="selectedDeliveryMethod" text="{/SelectedDeliveryMethod}" />
+							<Text id="selectedDeliveryMethod" text="{= ${/SelectedDeliveryMethod}==='Standard Delivery' ? ${i18n>checkoutDeliveryTypeStandard} : ${i18n>checkoutDeliveryTypeExpress} }" />
 						</form:content>
 					</form:SimpleForm>
 					<form:SimpleForm
