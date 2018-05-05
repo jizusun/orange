@@ -132,16 +132,17 @@
 										<layout:GridData span="XL4 L4 M4 S12"/>
 									</layoutData>
 								</Label>
+								<!-- ,
+										constraints: {
+											minLength: 3,
+											search: '^[a-zA-Z]+[\\s]?[a-zA-Z]+$'
+										} -->
 								<Input
 									id="creditCardHolderName"
 									placeholder="{i18n>creditCardHolderText}"
 									value="{
 										path: '/CreditCard/Name',
-										type: 'sap.ui.model.type.String',
-										constraints: {
-											minLength: 3,
-											search: '^[a-zA-Z]+[\\s]?[a-zA-Z]+$'
-										}
+										type: 'sap.ui.model.type.String'
 									}"
 									change="checkCreditCardStep">
 									<layoutData>
@@ -242,7 +243,7 @@
 							icon="sap-icon://official-service">
 							<Panel>
 								<layout:Grid
-									defaultSpan="L6 M6 S10"
+									defaultSpan="L6 M6 S12"
 									hSpacing="2">
 									<Label
 										text="{i18n>checkoutBankAccountName}"
@@ -377,7 +378,7 @@
 								editable="true">
 								<Label text="{i18n>checkoutInvoiceAddressDifferentDeliveryAddress}">
 									<layoutData>
-										<layout:GridData span="XL4 L4 M4 S12"/>
+										<layout:GridData span="XL4 L4 M4 S7"/>
 									</layoutData>
 								</Label>
 								<CheckBox
@@ -385,7 +386,7 @@
 									selected="{/DifferentDeliveryAddress}"
 									select="setDifferentDeliveryAddress">
 									<layoutData>
-										<layout:GridData span="XL8 L8 M8 S12"/>
+										<layout:GridData span="XL8 L8 M8 S5"/>
 									</layoutData>
 								</CheckBox>
 								<Label
@@ -396,16 +397,17 @@
 										<layout:GridData span="XL4 L4 M4 S12"/>
 									</layoutData>
 								</Label>
+								<!-- ,
+										constraints: {
+											minLength: 4,
+											search: '^[a-zA-Z-]+\\.?\\s?[0-9a-zA-Z\\s]*$'
+										} -->
 								<Input
 									id="invoiceAddressAddress"
 									placeholder="{i18n>addressText}"
 									value="{
 										path: '/InvoiceAddress/Address',
-										type: 'sap.ui.model.type.String',
-										constraints: {
-											minLength: 4,
-											search: '^[a-zA-Z-]+\\.?\\s?[0-9a-zA-Z\\s]*$'
-										}
+										type: 'sap.ui.model.type.String'
 									}"
 									change="checkInvoiceStep">
 									<layoutData>
@@ -420,16 +422,17 @@
 										<layout:GridData span="XL4 L4 M4 S12"/>
 									</layoutData>
 								</Label>
+								<!-- ,
+										constraints: {
+											minLength: 3,
+											search: '^[a-zA-Z\\s]+$'
+										} -->
 								<Input
 									id="invoiceAddressCity"
 									placeholder="{i18n>cityText}"
 									value="{
 										path: '/InvoiceAddress/City',
-										type: 'sap.ui.model.type.String',
-										constraints: {
-											minLength: 3,
-											search: '^[a-zA-Z\\s]+$'
-										}
+										type: 'sap.ui.model.type.String'
 									}"
 									change="checkInvoiceStep">
 									<layoutData>
@@ -468,16 +471,17 @@
 										<layout:GridData span="XL4 L4 M4 S12"/>
 									</layoutData>
 								</Label>
+								<!-- ,
+										constraints: {
+											minLength: 2,
+											search: '^[a-zA-Z]+$'
+										} -->
 								<Input
 									id="invoiceAddressCountry"
 									placeholder="{i18n>countryText}"
 									value="{
 										path: '/InvoiceAddress/Country',
-										type: 'sap.ui.model.type.String',
-										constraints: {
-											minLength: 2,
-											search: '^[a-zA-Z]+$'
-										}
+										type: 'sap.ui.model.type.String'
 									}"
 									change="checkInvoiceStep">
 									<layoutData>
@@ -519,16 +523,17 @@
 										<layout:GridData span="XL4 L4 M4 S12"/>
 									</layoutData>
 								</Label>
+								<!-- ,
+										constraints: {
+											minLength: 4,
+											search: '^[a-zA-Z-]+\\.?\\s?[0-9a-zA-Z\\s]*$'
+										} -->
 								<Input
 									id="deliveryAddressAddress"
 									placeholder="{i18n>addressText}"
 									value="{
 										path: '/DeliveryAddress/Address',
-										type: 'sap.ui.model.type.String',
-										constraints: {
-											minLength: 4,
-											search: '^[a-zA-Z-]+\\.?\\s?[0-9a-zA-Z\\s]*$'
-										}
+										type: 'sap.ui.model.type.String'
 									}"
 									change="checkDeliveryAddressStep">
 									<layoutData>
@@ -543,16 +548,17 @@
 										<layout:GridData span="XL4 L4 M4 S12"/>
 									</layoutData>
 								</Label>
+								<!-- ,
+										constraints: {
+											minLength: 3,
+											search: '^[a-zA-Z\\s]+$'
+										} -->
 								<Input
 									id="deliveryAddressCity"
 									placeholder="{i18n>cityText}"
 									value="{
 										path: '/DeliveryAddress/City',
-										type: 'sap.ui.model.type.String',
-										constraints: {
-											minLength: 3,
-											search: '^[a-zA-Z\\s]+$'
-										}
+										type: 'sap.ui.model.type.String'
 									}"
 									change="checkDeliveryAddressStep">
 									<layoutData>
@@ -591,16 +597,17 @@
 										<layout:GridData span="XL4 L4 M4 S12"/>
 									</layoutData>
 								</Label>
+								<!-- ,
+										constraints: {
+											minLength: 2,
+											search: '^[a-zA-Z]+$'
+										} -->
 								<Input
 									id="deliveryAddressCountry"
 									placeholder="{i18n>countryText}"
 									value="{
 										path: '/DeliveryAddress/Country',
-										type: 'sap.ui.model.type.String',
-										constraints: {
-											minLength: 2,
-											search: '^[a-zA-Z]+$'
-										}
+										type: 'sap.ui.model.type.String'
 									}"
 									change="checkDeliveryAddressStep">
 									<layoutData>
@@ -753,6 +760,10 @@
 
 					<form:SimpleForm
 						editable="false"
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="4"
+						labelSpanS="6"
 						layout="ResponsiveGridLayout"
 						ariaLabelledBy="toolbarPaymentTitle">
 						<form:toolbar>
@@ -781,6 +792,10 @@
 					</form:SimpleForm>
 
 					<form:SimpleForm
+							labelSpanXL="4"
+							labelSpanL="4"
+							labelSpanM="4"
+							labelSpanS="5"
 							visible="{= ${/SelectedPayment}==='Credit Card' ? true : false}"
 							editable="false"
 							layout="ResponsiveGridLayout"
@@ -817,6 +832,10 @@
 					</form:SimpleForm>
 
 					<form:SimpleForm
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="4"
+						labelSpanS="3"
 						visible="{= ${/SelectedPayment}==='Bank Transfer' ? true : false}"
 						title="{i18n>checkoutSummaryTitle3bt}"
 						editable="false"
@@ -836,7 +855,12 @@
 							<Text text="{i18n>accountNumberText}" />
 						</form:content>
 					</form:SimpleForm>
+
 					<form:SimpleForm
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="4"
+						labelSpanS="3"
 						visible="{= ${/SelectedPayment}==='Cash on Delivery' ? true : false}"
 						editable="false"
 						layout="ResponsiveGridLayout"
@@ -871,7 +895,12 @@
 							<Text text="{/CashOnDelivery/Email}" />
 						</form:content>
 					</form:SimpleForm>
+
 					<form:SimpleForm
+							labelSpanXL="4"
+							labelSpanL="4"
+							labelSpanM="4"
+							labelSpanS="3"
 							title=""
 							editable="false"
 							layout="ResponsiveGridLayout"
@@ -909,6 +938,10 @@
 						</form:content>
 					</form:SimpleForm>
 					<form:SimpleForm
+							labelSpanXL="4"
+							labelSpanL="4"
+							labelSpanM="4"
+							labelSpanS="6"
 							title=""
 							editable="false"
 							layout="ResponsiveGridLayout"
@@ -938,6 +971,10 @@
 						</form:content>
 					</form:SimpleForm>
 					<form:SimpleForm
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="4"
+						labelSpanS="3"
 						editable="false"
 						layout="ResponsiveGridLayout"
 						visible="{= ${/DifferentDeliveryAddress}}"
@@ -975,6 +1012,10 @@
 						</form:content>
 					</form:SimpleForm>
 					<form:SimpleForm
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="4"
+						labelSpanS="3"
 						editable="false"
 						layout="ResponsiveGridLayout"
 						visible="{= !${/DifferentDeliveryAddress}}"
