@@ -63,6 +63,7 @@
 				</statuses>
 			</ObjectHeader>
 			<VBox
+				justifyContent="Center"
 				alignItems="Center"
 				renderType="Div">
 					<Image
@@ -72,7 +73,6 @@
 							formatter : '.formatter.pictureUrl'
 						}"
 						decorative="true"
-						class="sapUiSmallMargin"
 						press="onPicturePress"
 						width="100%"
 					/>
