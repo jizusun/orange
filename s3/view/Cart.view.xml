@@ -1,61 +1,67 @@
-<mvc:View controllerName="view.Cart"
+<mvc:View
+	controllerName="sap.ui.demo.cart.controller.Cart"
 	xmlns="sap.m"
-	xmlns:core="sap.ui.core"
-	xmlns:mvc="sap.ui.core.mvc" 
-	xmlns:control="control"
-	xmlns:h="http://www.w3.org/1999/xhtml">
+	xmlns:mvc="sap.ui.core.mvc">
 	<Page
 		id="page"
 		title="{cfg>/pageTitle}"
 		showNavButton="{cfg>/notInDelete}"
-		navButtonPress="handleNavButtonPress"
+		navButtonPress="onNavButtonPress"
 		showFooter="true" >
 		<headerContent>
 			<Button
 				id="editButton"
 				icon="sap-icon://edit"
-				enabled="{cartProducts>/showEditAndProceedButton}"
+				enabled="{parts: [
+					{path: 'cartProducts>/cartEntries'},
+					{path: 'cartProducts>/savedForLaterEntries'}
+				 ], formatter : '.formatter.hasItems'}"
 				visible="{cfg>/notInDelete}"
-				press="handleEditOrDoneButtonPress" />
+				press="onEditOrDoneButtonPress"
+				tooltip="{i18n>cartEditButtonTooltip}"/>
 		</headerContent>
 		<footer>
-			<Bar>
-				<contentRight>
+			<Toolbar>
+				<Text
+					id="totalPriceText"
+					text="{
+						path : 'cartProducts>/cartEntries',
+						formatter : '.formatter.totalPrice'
+					} RMB" />
 				<ToolbarSpacer/>
 				<Button
 					id="proceedButton"
-					text="{i18n>CART_PROCEED_BUTTON_TEXT}"
-					tooltip="{i18n>CART_PROCEED_BUTTON_TOOLTIP}"
-					icon="sap-icon://loan"
-					enabled="{cartProducts>/showEditAndProceedButton}"
+					type="Accept"
+					text="{i18n>cartProceedButtonText}"
+					enabled="{
+						path: 'cartProducts>/cartEntries',
+						formatter: '.formatter.hasItems'
+					}"
 					visible="{cfg>/notInDelete}"
-					press="handleProceedButtonPress" />
+					press="onProceedButtonPress" />
 				<Button
 					id="doneButton"
-					text="{i18n>CART_DONE_BUTTON_TEXT}"
-					tooltip="{i18n>CART_DONE_BUTTON_TOOLTIP}"
-					icon="sap-icon://accept"
+					text="{i18n>cartDoneButtonText}"
 					enabled="true"
 					visible="{cfg>/inDelete}"
-					press="handleEditOrDoneButtonPress" />
-				</contentRight>
-			</Bar>
+					press="onEditOrDoneButtonPress" />
+			</Toolbar>
 		</footer>
 		<content>
 			<List
 				id="entryList"
 				footerText="{
-					path : 'cartProducts>/totalPrice',
-					formatter : 'util.Formatter.totalPrice'
-				} RMB"
+					path : 'cartProducts>/savedForLaterEntries',
+					formatter : '.formatter.footerTextForCart'
+				}"
 				mode="{cfg>/listMode}"
-				delete="handleEntryListDelete"
-				select="handleEntryListSelect"
-				noDataText="{i18n>CART_NO_DATA}"
+				delete="onCartEntriesDelete"
+				selectionChange="onEntryListSelect"
+				noDataText="{i18n>cartNoData}"
 				items="{
-					path : 'cartProducts>/entries',
+					path : 'cartProducts>/cartEntries',
 					sorter : {
-						path : 'cartProducts>Name',
+						path : 'Name',
 						descending : false
 					}
 				}">
@@ -65,40 +71,81 @@
 						type="{cfg>/listItemType}"
 						icon="{
 							path : 'cartProducts>PictureUrl',
-							formatter: 'util.Formatter.pictureUrl'
+							formatter : '.formatter.pictureUrl'
 						}"
 						title="{cartProducts>Name}"
 						number="{
 							path : 'cartProducts>Price',
-							formatter : 'util.Formatter.price'
+							formatter : '.formatter.price'
 						}"
 						numberUnit="RMB"
-						press="handleEntryListPress"
-						iconInset="false"
+						press="onEntryListPress"
 						iconDensityAware="false" >
 						<attributes>
 							<ObjectAttribute
-								text="{
-									path : 'cartProducts>SupplierName',
-									formatter : 'util.Formatter.supplierNameWithLabel'
-								}" />
+								active="true"
+								press="onSaveForLater"
+								text="{i18n>cartSaveForLaterLinkText}" />
 						</attributes>
 						<firstStatus>
 							<ObjectStatus
 								text="{
 									path : 'cartProducts>Status',
-									formatter : 'util.Formatter.statusText'
+									formatter : '.formatter.statusText'
 								}"
 								state="{
 									path : 'cartProducts>Status',
-									formatter : 'util.Formatter.statusState'
+									formatter : '.formatter.statusState'
 								}" />
 						</firstStatus>
-						<customData>
-							<core:CustomData
-								key="productId"
-								value="{cartProducts>ProductId}" />
-						</customData>
+					</ObjectListItem>
+				</items>
+			</List>
+			<List
+				id="saveForLaterList"
+				mode="{cfg>/listMode}"
+				showNoData="false"
+				delete="onSaveForLaterDelete"
+				selectionChange="onEntryListSelect"
+				items="{
+					path : 'cartProducts>/savedForLaterEntries',
+					sorter : {
+						path : 'Name',
+						descending : false
+					}
+				}">
+				<items>
+					<ObjectListItem
+						type="{cfg>/listItemType}"
+						icon="{
+							path : 'cartProducts>PictureUrl',
+							formatter : '.formatter.pictureUrl'
+						}"
+						title="{cartProducts>Name}"
+						number="{
+							path : 'cartProducts>Price',
+							formatter : '.formatter.price'
+						}"
+						numberUnit="RMB"
+						press="onEntryListPress"
+						iconDensityAware="false" >
+						<attributes>
+							<ObjectAttribute
+								active="true"
+								press="onAddBackToBasket"
+								text="{i18n>cartAddToCartLinkText}" />
+						</attributes>
+						<firstStatus>
+							<ObjectStatus
+								text="{
+									path : 'cartProducts>Status',
+									formatter : '.formatter.statusText'
+								}"
+								state="{
+									path : 'cartProducts>Status',
+									formatter : '.formatter.statusState'
+								}" />
+						</firstStatus>
 					</ObjectListItem>
 				</items>
 			</List>

@@ -86,7 +86,7 @@ sap.ui.core.UIComponent.extend("sap.ui.sample.poa.Component", {
 			viewName : "sap.ui.sample.poa.view.App",
 			type : "JS",
 			viewData : { component : this }
-		});
+		}).toggleStyleClass("sapUiSizeCompact", sap.ui.Device.system.desktop);
 		
 		// set i18n model (must be done before data)
 		var i18nModel = new sap.ui.model.resource.ResourceModel({
