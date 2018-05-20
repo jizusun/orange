@@ -1,4 +1,26 @@
-var oNewsFacetContent = null;
+var oNewsFacetContent = new sap.m.SlideTile({
+	transitionTime: 500,
+	tiles: [
+		new sap.m.GenericTile({
+			backgroundImage: "images/news1.jpg",
+			frameType: "TwoByOne",
+			tileContent: [
+				new sap.m.TileContent({
+					footer: "August 21, 2018",
+					content: [
+						new sap.m.NewsContent({
+							contentText: "清甜润燥的枇杷",
+							subheader: "十二月震撼上市"
+						})
+					]
+				})
+			]
+		})
+	]
+}).addStyleClass("sapUiTinyMarginBottom"); 
+
+
+/*var oNewsFacetContent = null;
 
 if(!isPhone){
 	var oHourAgo = new Date();
@@ -6,7 +28,6 @@ if(!isPhone){
 	var oArticleNews1 = new sap.suite.ui.commons.FeedItem({
 		title: "清甜润燥的枇杷",
 		image: "images/news1.jpg",
-		//link: "http://",
 		source: "十二月震撼上市", 
 		publicationDate: oHourAgo		
 	});	
@@ -16,7 +37,6 @@ if(!isPhone){
 	var oArticleNews2 = new sap.suite.ui.commons.FeedItem({
 		title: "酸甜适口、脆嫩多汁的草莓",
 		image: "images/news2.jpg",
-		//link: "http://",
 		source: "浓浓的童年记忆", 
 		publicationDate: oOneDaysAgo		
 	});
@@ -26,7 +46,6 @@ if(!isPhone){
 	var oArticleNews3 = new sap.suite.ui.commons.FeedItem({
 		title: "细腻甜脆、清香爽滑的蓝莓",
 		image: "images/news3.jpg",
-		//link: "http://",
 		source: "富含花青素和食用纤维", 
 		publicationDate: oTwoDaysAgo		
 	});	
@@ -38,10 +57,7 @@ if(!isPhone){
 
 	oNewsFacetContent = new sap.suite.ui.commons.FeedTile("feedtile_news", {
 		items: articles,
-		displayDuration: 3,
-		/*press: function(event){
-			event.getSource().rerender();
-		}*/
+		displayDuration: 3
 	});
 }
 else{
@@ -61,21 +77,19 @@ else{
 			}, 5000);
 		}
 	});
-}
+}*/
 
 var oNewsFacet = new sap.suite.ui.commons.FacetOverview("facet_news", {
     title: "新鲜推荐",
     quantity: 3,
     content: oNewsFacetContent,
-    //height: isPhone ? "8rem" : "10rem",
-    heightType: isPhone ? "Auto" : "L",
-    /*press: function() {
-        setFacetContent("news");
-    }*/
+    heightType: isPhone ? "Auto" : /*"L" */"Auto",
 });
 
+
+
 /**
- * Products Facet Group
+ * Products Facet Group (Deprecated)
  * */
 
 /*var oNewsFacetGroup = new sap.suite.ui.commons.UnifiedThingGroup("group_news", {

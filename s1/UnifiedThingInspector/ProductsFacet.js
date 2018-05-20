@@ -139,14 +139,16 @@ var oProductsFacetGroupContent = new sap.m.List({
         	hAlign : sap.ui.core.TextAlign.Begin,
         	header : new sap.m.Text({text : "规格"}),
         	minScreenWidth : "Tablet",
-            demandPopin : true
+            demandPopin : true,
+            popinDisplay: sap.m.PopinDisplay.Inline
         }),
         new sap.m.Column({
         	hAlign : sap.ui.core.TextAlign.Begin,
         	width : "30%",
         	header : new sap.m.Text({text : "产地"}),
         	minScreenWidth : "Tablet",
-            demandPopin : true
+            demandPopin : true,
+            popinDisplay: sap.m.PopinDisplay.Inline
         }),
         new sap.m.Column({
         	hAlign : sap.ui.core.TextAlign.Begin,

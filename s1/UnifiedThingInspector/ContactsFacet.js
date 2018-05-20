@@ -159,21 +159,24 @@ var oListContactsWithImagesForm = new sap.m.List({
             hAlign : sap.ui.core.TextAlign.Begin,
             header : new sap.m.Text({text : "职位"}),
             minScreenWidth : "Tablet",
-            demandPopin : true
+            demandPopin : true,
+            popinDisplay: sap.m.PopinDisplay.Inline
         }), 
         new sap.m.Column({
             hAlign : sap.ui.core.TextAlign.Begin,
             width : "30%",
             header : new sap.m.Text({text : "手机号码"}),
             minScreenWidth : "Tablet",
-            demandPopin : true
+            demandPopin : true,
+            popinDisplay: sap.m.PopinDisplay.Inline
         }),
         new sap.m.Column({
             hAlign : sap.ui.core.TextAlign.Begin,
             width : "30%",
             header : new sap.m.Text({text : "电子邮件"}),
             minScreenWidth : "Tablet",
-            demandPopin : true
+            demandPopin : true,
+            popinDisplay: sap.m.PopinDisplay.Inline
         })],
     items: {
         path : "/navigation",
