@@ -6,7 +6,7 @@ var oNewsFacetContent = new sap.m.SlideTile({
 			frameType: "TwoByOne",
 			tileContent: [
 				new sap.m.TileContent({
-					footer: "August 21, 2018",
+					footer: "June 20, 2018",
 					content: [
 						new sap.m.NewsContent({
 							contentText: "清甜润燥的枇杷",
@@ -15,9 +15,39 @@ var oNewsFacetContent = new sap.m.SlideTile({
 					]
 				})
 			]
+		}),
+		new sap.m.GenericTile({
+			backgroundImage: "images/news2.jpg",
+			frameType: "TwoByOne",
+			tileContent: [
+				new sap.m.TileContent({
+					footer: "June 21, 2018",
+					content: [
+						new sap.m.NewsContent({
+							contentText: "酸甜适口、脆嫩多汁的草莓",
+							subheader: "浓浓的童年记忆"
+						})
+					]
+				})
+			]
+		}),
+		new sap.m.GenericTile({
+			backgroundImage: "images/news3.jpg",
+			frameType: "TwoByOne",
+			tileContent: [
+				new sap.m.TileContent({
+					footer: "August 08, 2018",
+					content: [
+						new sap.m.NewsContent({
+							contentText: "细腻甜脆、清香爽滑的蓝莓",
+							subheader: "富含花青素和食用纤维"
+						})
+					]
+				})
+			]
 		})
 	]
-}).addStyleClass("sapUiTinyMarginBottom"); 
+});
 
 
 /*var oNewsFacetContent = null;
@@ -82,8 +112,11 @@ else{
 var oNewsFacet = new sap.suite.ui.commons.FacetOverview("facet_news", {
     title: "新鲜推荐",
     quantity: 3,
-    content: oNewsFacetContent,
-    heightType: isPhone ? "Auto" : /*"L" */"Auto",
+    content: new sap.m.HBox({
+    	justifyContent: "Center",
+    	items: oNewsFacetContent
+    }).addStyleClass("sapUiContentPadding"),
+    heightType: isPhone ? "Auto" : "L",
 });
 
 

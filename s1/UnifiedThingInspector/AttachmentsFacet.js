@@ -141,8 +141,8 @@ var oAttachmentsFacetGroup = new sap.suite.ui.commons.UnifiedThingGroup("group_a
 var oAttachmentsFacet = new sap.suite.ui.commons.FacetOverview("facet_attachments", {
     title: "下载专区",
     quantity: 4,
-    heightType : isPhone ? "Auto" : "M",
-    content : oAttachmentContentFacet,
+    heightType: isPhone ? "Auto" : "M",
+    content: oAttachmentContentFacet,
     press: function() {
     	setFacetContent("attachments");
     }

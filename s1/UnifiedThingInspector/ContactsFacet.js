@@ -82,7 +82,7 @@ var oContactsFacet = new sap.suite.ui.commons.FacetOverview("facet_contacts", {
     title: "销售团队",
     quantity: 5,
     content: oContactsContent,
-    heightType : isPhone ? "Auto" : "L",
+    heightType: isPhone ? "Auto" : "L",
     press: function() {
         setFacetContent("contacts");
     }
@@ -141,7 +141,7 @@ var oTemplateContactsWithImagesData = new sap.m.ColumnListItem({
     ]
 });
 
-var oListContactsWithImagesForm = new sap.m.List({
+var oListContactsWithImagesForm = new sap.m.List("list_contacts", {
     threshold: 2,
     inset : false,
     showUnread : true,
@@ -149,38 +149,43 @@ var oListContactsWithImagesForm = new sap.m.List({
     columns : [
         new sap.m.Column({
             hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
             header: new sap.m.Text({text: ""})
         }),
         new sap.m.Column({
-        	hAlign : sap.ui.core.TextAlign.Begin,
-        	header : new sap.m.Text({text : "姓名"})
+        	hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+        	header: new sap.m.Text({text : "姓名"})
         }), 
         new sap.m.Column({
-            hAlign : sap.ui.core.TextAlign.Begin,
-            header : new sap.m.Text({text : "职位"}),
-            minScreenWidth : "Tablet",
-            demandPopin : true,
+            hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+            header: new sap.m.Text({text : "职位"}),
+            minScreenWidth: "Tablet",
+            demandPopin: true,
             popinDisplay: sap.m.PopinDisplay.Inline
         }), 
         new sap.m.Column({
-            hAlign : sap.ui.core.TextAlign.Begin,
-            width : "30%",
-            header : new sap.m.Text({text : "手机号码"}),
-            minScreenWidth : "Tablet",
-            demandPopin : true,
+            hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+            width: "30%",
+            header: new sap.m.Text({text : "手机号码"}),
+            minScreenWidth: "Tablet",
+            demandPopin: true,
             popinDisplay: sap.m.PopinDisplay.Inline
         }),
         new sap.m.Column({
-            hAlign : sap.ui.core.TextAlign.Begin,
-            width : "30%",
-            header : new sap.m.Text({text : "电子邮件"}),
-            minScreenWidth : "Tablet",
-            demandPopin : true,
+            hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+            width: "30%",
+            header: new sap.m.Text({text : "电子邮件"}),
+            minScreenWidth: "Tablet",
+            demandPopin: true,
             popinDisplay: sap.m.PopinDisplay.Inline
         })],
     items: {
-        path : "/navigation",
-        template : oTemplateContactsWithImagesData
+        path: "/navigation",
+        template: oTemplateContactsWithImagesData
     }
 });
 

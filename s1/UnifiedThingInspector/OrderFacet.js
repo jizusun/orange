@@ -24,9 +24,9 @@ var oOrderNumber = new sap.m.Text();
 var oOrderStatus = new sap.m.Text();
 var oOrderCurPlace = new sap.m.Text();
 var oOrderPreDeliverDate = new sap.m.Text();
-var orderInfoData = [{status: "未发货", place: "广州仓库", date: "2014-12-24"},
-                     {status: "已发货", place: "北京中转站", date: "2014-12-12"},
-					 {status: "已签收", place: "上海闸北区", date: "2014-08-08"}];
+var orderInfoData = [{status: "未发货", place: "广州仓库", date: "2018-06-24"},
+                     {status: "已发货", place: "北京中转站", date: "2018-05-12"},
+					 {status: "已签收", place: "上海闸北区", date: "2018-06-08"}];
 
 var oOrderInfo = new sap.ui.layout.Grid("grid_order_info_summary", {
     defaultSpan: "L6 M6 S6",
@@ -88,8 +88,8 @@ var oOrderSearch = new sap.m.VBox({
 });*/
 
 var oOrderFacet = new sap.suite.ui.commons.FacetOverview("facet_order", {
-	title : "订单查询",
-	heightType : isPhone ? "Auto" : "M",
+	title: "订单查询",
+	heightType: isPhone ? "Auto" : "M",
 	content: oOrderSearch,
 	/*press: function(event) {
         //setFacetContent("order");

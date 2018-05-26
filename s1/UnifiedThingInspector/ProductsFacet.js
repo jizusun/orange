@@ -1,4 +1,5 @@
 var oProductsContent = new sap.m.HBox("products-box", {
+    justifyContent: "SpaceBetween",
     items: [
              new sap.m.Image({
                  src: "images/p_strawberry.jpg",
@@ -42,7 +43,8 @@ var oProductsFacet = new sap.suite.ui.commons.FacetOverview("facet_products", {
     title: "全部商品",
     quantity: 9,
     content: oProductsContent,
-    height: isPhone ? "8rem" : "10rem",
+    //heightType: "Auto",
+    height: isPhone ? "8rem" : "9rem",
     press: function() {
         setFacetContent("products");
     }
@@ -69,7 +71,7 @@ var productsListData = [
                         {
                         	picSrc: "images/p_kiwiberry.jpg",
                         	name: "猕猴桃",
-                        	spec: "20  个/箱",
+                        	spec: "20 个/箱",
                         	origin: "新西兰",
                         	stock: "有货"
                         },
@@ -119,7 +121,7 @@ var productsListData = [
 
 var oProductsListModel = new sap.ui.model.json.JSONModel({ products: productsListData });
 
-var oProductsFacetGroupContent = new sap.m.List({
+var oProductsFacetGroupContent = new sap.m.List("list_products", {
     //backgroundDesign: sap.m.BackgroundDesign.Transparent,
     //showSeparators: sap.m.ListSeparators.Inner,
     threshold: 2,
@@ -129,33 +131,36 @@ var oProductsFacetGroupContent = new sap.m.List({
     columns : [
         new sap.m.Column({
             hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
             header: new sap.m.Text({text: ""})
         }),
         new sap.m.Column({
-        	hAlign : sap.ui.core.TextAlign.Begin,
-        	header : new sap.m.Text({text : "商品"})
+        	hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+        	header: new sap.m.Text({text : "商品"})
         }),
         new sap.m.Column({
-        	hAlign : sap.ui.core.TextAlign.Begin,
-        	header : new sap.m.Text({text : "规格"}),
-        	minScreenWidth : "Tablet",
-            demandPopin : true,
+        	hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+        	header: new sap.m.Text({text : "规格"}),
+        	minScreenWidth: "Tablet",
+            demandPopin: true,
             popinDisplay: sap.m.PopinDisplay.Inline
         }),
         new sap.m.Column({
-        	hAlign : sap.ui.core.TextAlign.Begin,
-        	width : "30%",
-        	header : new sap.m.Text({text : "产地"}),
-        	minScreenWidth : "Tablet",
-            demandPopin : true,
+        	hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+        	width: "30%",
+        	header: new sap.m.Text({text : "产地"}),
+        	minScreenWidth: "Tablet",
+            demandPopin: true,
             popinDisplay: sap.m.PopinDisplay.Inline
         }),
         new sap.m.Column({
-        	hAlign : sap.ui.core.TextAlign.Begin,
-        	width : "30%",
-        	header : new sap.m.Text({text : "库存"}),
-        	//minScreenWidth : "Tablet",
-            //demandPopin : true
+        	hAlign: sap.ui.core.TextAlign.Begin,
+            vAlign: sap.ui.core.VerticalAlign.Middle,
+        	width: "30%",
+        	header: new sap.m.Text({text : "库存"})
         })
     ],
     items: {
@@ -167,7 +172,7 @@ var oProductsFacetGroupContent = new sap.m.List({
             	        new sap.m.Text({ text: "{product>name}" }),
             	        new sap.m.Text({ text: "{product>spec}" }),
             	        new sap.m.Text({ text: "{product>origin}" }),
-            	        new sap.m.Text({ text: "{product>stock}" }),
+            	        new sap.m.Text({ text: "{product>stock}" })
             	       ]
             })
     }

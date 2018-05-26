@@ -15,7 +15,7 @@ var oInfoGrid = new sap.m.VBox({
                 //new sap.m.Link({text: "支付方式"}).addStyleClass("xcLinkItemMargin"),
                 new sap.m.Link({text: "支付方式"}).addStyleClass("xcLinkItemMargin"),
                 new sap.m.Link({text: "配送说明"}).addStyleClass("xcLinkItemMargin"),
-                new sap.m.Link({text: "使用优惠券"}),
+                new sap.m.Link({text: isPhone?"优惠券":"使用优惠券"}),
             ]
         }),
         new sap.m.HBox({
@@ -67,5 +67,5 @@ var oInfoFacetContent = new sap.m.FlexBox({
 var oInfoFacet = new sap.suite.ui.commons.FacetOverview("facet_info", {
 	title: "关于",
 	content: oInfoFacetContent,
-	heightType : isPhone ? "Auto" : "M"
+	heightType: isPhone ? "Auto" : "M"
 });

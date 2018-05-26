@@ -462,49 +462,68 @@ function appInit() {
 			 var oActionSheet = new sap.m.ActionSheet("unified-action-sheet-ext", {
 				  showCancelButton: true,
 				  placement: sap.m.PlacementType.Top,
-		        	buttons : {
+		        	buttons: {
 		            path: "/actions",
-		            template : oButtonTempl
+		            template: oButtonTempl
 		        }
 			});
 			oActionSheet.setModel(oModel);
 		    
+		    var iPRCnt = 0, iCRCnt = 0;
 		    oUTI = new sap.suite.ui.commons.UnifiedThingInspector({
-		        id : "unified",
+		        id: "unified",
 		        icon: "images/logo.png",
-		        title : "{/title}",
-		        name : "{/name}",
-		        description : "{/description}",
-		        actionsVisible : true,
-		        transactionsVisible : false,
-		        configurationVisible : isPhone,
-		        kpis : {
+		        title: "{/title}",
+		        name: "{/name}",
+		        description: "{/description}",
+		        actionsVisible: true,
+		        transactionsVisible: false,
+		        configurationVisible: isPhone,
+		        kpis: {
 		            path : "/kpis",
 		            factory: fnKpiFactory
 		        },
-		        facets : [ oNewsFacet, oOrderFacet, oProductsFacet, oContactsFacet, oAttachmentsFacet, oComplaintsFacet, oInfoFacet,
+		        facets: [ oNewsFacet, oOrderFacet, oProductsFacet, oContactsFacet, oAttachmentsFacet, oComplaintsFacet, oInfoFacet,
 		                 ],
 		        afterNavigate: function(event){
 		        	if(event.getSource()._oMasterPage.getId() == event.getParameters().getParameter("toId")){
 		        		if(!isPhone)
 		        			oNewsFacetContent.rerender();
+		        	}else{
+		        		if(isPhone){
+		        			var sId = event.getSource().getFacetContent()[0].getContent().getId();
+		        			if(sId === "list_products" && iPRCnt < 1){
+		        				iPRCnt++;
+		        				event.getSource().getFacetContent()[0].getContent().rerender();
+		        			}else if(sId === "list_contacts" && iCRCnt < 1){
+		        				iCRCnt++;
+		        				event.getSource().getFacetContent()[0].getContent().rerender();
+		        			}
+		        		}
 		        	}
 		        }
-		    }).addDelegate({
+		    }).addEventDelegate({
 		    	onAfterRendering: function(event){
-		    		if(isPhone)
-		    			(oUTI._oMasterPage.getFooter().getContentLeft())[0].setIcon("sap-icon://discussion");
 		    		
-		    		var oMasterPageTitle = (oUtiMasterPage.mAggregations._internalHeader.getContentMiddle())[0].getDomRef();
-		    		oMasterPageTitle.style.color = "#007833";
-		    		//oMasterPageTitle.style.fontFamily = "\"Comic Sans MS\", cursive, sans-serif";
-		    		oMasterPageTitle.style.fontSize = isPhone ? "1.3rem":"1.5rem";
+		    		var oMasterPageTitle = (oUtiMasterPage.mAggregations._internalHeader.getContentMiddle())[0];
+		    		oMasterPageTitle.addEventDelegate({
+		    			onAfterRendering: function(){
+				    		if(isPhone){
+				    			(oUTI._oMasterPage.getFooter().getContentLeft())[0].setIcon("sap-icon://discussion");
+				    		}
+
+				    		oMasterPageTitleDom = oMasterPageTitle.getDomRef();
+				    		oMasterPageTitleDom.style.color = "#007833";
+		    				oMasterPageTitleDom.style.fontSize = isPhone ? "1.3rem":"1.5rem";
+		    			}
+		    		});
 		    		
 		    		var oDetailPageTitle = (oUTI._oDetailPage.mAggregations._internalHeader.getContentMiddle())[0];
-		    		oDetailPageTitle.addDelegate({
+		    		oDetailPageTitle.addEventDelegate({
 		    	    	onAfterRendering: function(event){
-		    	    		if(isPhone)
+		    	    		if(isPhone){
 		    	    			(oUTI._oDetailPage.getFooter().getContentLeft())[0].setIcon("sap-icon://discussion");
+		    	    		}
 		    	    		
 		    	    		oDetailPageTitleDom = oDetailPageTitle.getDomRef();
 		    	    		oDetailPageTitleDom.style.color = "#007833";
@@ -582,7 +601,6 @@ function appInit() {
 		        enableScrolling: false,
 		        content:[ oUTI ]});
 		    oApp.addPage(oInitialPage);
-		    //oApp.placeAt("sample_home");
 		    
 		    var oShell = new sap.m.Shell();
 		    oShell.setApp(oApp);

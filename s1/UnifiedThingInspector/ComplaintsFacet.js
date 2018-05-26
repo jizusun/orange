@@ -41,8 +41,8 @@ var oListComplaintsFacet = new sap.m.List({
 });
 
 var oComplaintsFacet = new sap.suite.ui.commons.FacetOverview("facet_complaints", {
-    title : "意见箱",
-    heightType : isPhone ? "Auto" : "L",
+    title: "意见箱",
+    heightType: isPhone ? "Auto" : "L",
     content: oListComplaintsFacet,
     press: function() {
     	setFacetContent("complaints");
@@ -57,28 +57,28 @@ var complaintsListData = [
 		Author : "亚历山大 琼斯",
 		AuthorPicUrl : "images/persons/person_03.png",
 		Type : "回复",
-		Date : "2014年12月15日 上午9:02:17",
+		Date : "2018年6月15日 上午9:02:17",
 		Text : "尊敬的客户您好，感谢您对我们新产品的支持。蓝莓富含花青素，多吃多健康哦。"
 	},
 	{
 		Author : "乔治 史密斯",
 		AuthorPicUrl : "images/persons/person_01.png",
 		Type : "客户留言",
-		Date : "2014年12月15日 上午8:50:23",
+		Date : "2018年6月15日 上午8:50:23",
 		Text : "第一次买了蓝莓，还不错，东西很新鲜，物流也很快。"
 	},
 	{
 		Author : "亚历山大 琼斯",
 		AuthorPicUrl : "images/persons/person_03.png",
 		Type : "回复",
-		Date : "2014年10月19日 下午5:33:50",
+		Date : "2018年5月19日 下午5:33:50",
 		Text : "尊敬的客户您好，感谢您对我们商品和公司的支持。您的宝贵意见，我们会尽快反映给有关部门，我们也在不断努力做的更好。期待您一如既往的支持。"
 	},
 	{
 		Author : "乔治 史密斯",
 		AuthorPicUrl : "images/persons/person_01.png",
 		Type : "客户留言",
-		Date : "2014年10月19日 下午5:30:40",
+		Date : "2018年5月19日 下午5:30:40",
 		Text : "上个月进了十箱脐橙，卖的不错。橙子很甜，还特意留了一些给家人吃。贵公司的水果确实很新鲜，很好。希望能多增加一些水果品种。"
 	}
 ];
