@@ -397,11 +397,11 @@ function appInit() {
 				   {
 		    		   icon: "images/weixin_128x128.png",
 		               text: "关注官方微信"
-		           },
+		           }/*,
 		           {
 		               icon: "images/weibo_128x128.png",
 		    		   text: "关注官方微博"
-				   }              
+				   }*/              
 		        ],
 		        actions : [
 		           {
@@ -487,8 +487,8 @@ function appInit() {
 		                 ],
 		        afterNavigate: function(event){
 		        	if(event.getSource()._oMasterPage.getId() == event.getParameters().getParameter("toId")){
-		        		if(!isPhone)
-		        			oNewsFacetContent.rerender();
+		        		/*if(!isPhone)
+		        			oNewsFacetContent.rerender();*/
 		        	}else{
 		        		if(isPhone){
 		        			var sId = event.getSource().getFacetContent()[0].getContent().getId();
@@ -531,6 +531,10 @@ function appInit() {
 		    	    	}
 		    		});
 		    		
+		    		var oKpi0 = document.getElementById("kpi0");
+		    		oKpi0.children[1].style.color = "#32CD32";
+		    		var oKpi1 = document.getElementById("kpi1");
+		    		oKpi1.children[1].style.color = "#FFA500";
 		    		var oKpi2 = document.getElementById("kpi2");
 		    		oKpi2.children[1].style.color = "#660099";
 		    	}
@@ -538,22 +542,31 @@ function appInit() {
 		    
 		    var oUtiMasterPage = oUTI._oMasterPage;
 			oUtiMasterPage.setShowNavButton(false);
+
+			var oPopoverWeiXin = new sap.m.Popover({
+				showHeader: false,
+				verticalScrolling: false,
+				placement: sap.m.PlacementType.Auto,
+				content: new sap.m.Image({
+					src: "../img_home/weixinerweima.png"
+				})
+			}).addStyleClass("sapUiContentPadding");
 			
 			if(!isPhone){
 				oUtiMasterPage.insertHeaderContent(new sap.m.Button({
 					icon: "images/weixin.png",
 					tooltip: "关注官方微信",
-					press: function(){
-						sap.m.MessageToast.show("关注官方微信");
+					press: function(oEvent){
+						oPopoverWeiXin.openBy(oEvent.getSource());
 					}
 				}), 1);
-				oUtiMasterPage.insertHeaderContent(new sap.m.Button({
+				/*oUtiMasterPage.insertHeaderContent(new sap.m.Button({
 					icon: "images/weibo.png",
 					tooltip: "关注官方微博",
 					press: function(){
 						sap.m.MessageToast.show("关注官方微博");
 					}
-				}), 2);
+				}), 2);*/
 			}
 			else{
 			    var oButtonTemp2 = new sap.m.Button({
@@ -580,7 +593,8 @@ function appInit() {
 				oUTI.attachConfigurationButtonPress(function(oE){
 					oE.preventDefault();
 			    	var oConfigurationBtn = oE.getParameter("caller");
-			    	oConfigurationSheet.openBy(oConfigurationBtn);
+			    	//oConfigurationSheet.openBy(oConfigurationBtn);
+			    	oPopoverWeiXin.openBy(oConfigurationBtn);
 			    });
 			}    
 		    

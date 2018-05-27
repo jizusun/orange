@@ -68,14 +68,15 @@ var oListAttachments = new sap.m.List({
                 var panel1 = new sap.m.Panel({
                     headerText: "我们的果园",
                     content: [
-                        new sap.m.Image({
+	                    new sap.m.Image({
+	                    	width: "100%",
                             src: "images/fruit_ranch.jpg"
                         }),
                         new sap.m.Text({
                           text: "果园清新，无污染。让您吃上放心水果。"
                         })
                     ]
-					});
+				});
 
 	        	var oPage = new sap.m.Page({
 	        		title : "图片预览",
