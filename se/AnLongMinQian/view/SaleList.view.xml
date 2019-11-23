@@ -1,0 +1,15 @@
+<mvc:View
+	controllerName="orange.se.almq.controller.SaleList"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		id="page"
+		showHeader="true"
+		title="SaleList Page"
+		class="customBackground">
+		<content>
+			
+		</content>
+	</Page>
+</mvc:View>

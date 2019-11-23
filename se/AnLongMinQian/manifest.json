@@ -1,0 +1,77 @@
+{
+	"_version": "1.4.0",
+	"sap.app": {
+		"id": "orange.se.almq",
+		"type": "application",
+		"title": "An Long Min Qian",
+		"description": "An Long Min Qian Sale List",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"ach": "ach"
+	},
+	"sap.fiori": {
+		"registrationIds": [ "F0000" ],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://business-objects-experience"
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "orange.se.almq.view.App",
+			"type": "XML",
+			"id": "splitapp"
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "orange.se.almq.view",
+				"controlId": "splitapp",
+				"controlAggregation": "detailPages",
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": ["home"]
+				},
+				{
+					"pattern": "salelist",
+					"name": "salelist",
+					"target": ["home", "salelist"]
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "Home",
+					"viewLevel": 0,
+					"controlAggregation": "masterPages"
+				},
+				"salelist": {
+					"viewName": "SaleList",
+					"viewLevel": 0,
+					"controlAggregation": "detailPages"
+				}
+			}
+		}
+	}
+}

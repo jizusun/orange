@@ -1,0 +1,15 @@
+<mvc:View
+	controllerName="orange.se.almq.controller.Home"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		id="page"
+		title="Home Page">
+		<headerContent>
+		</headerContent>
+		
+		<content>
+		</content>
+	</Page>
+</mvc:View>
